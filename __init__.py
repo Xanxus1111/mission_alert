@@ -15,7 +15,7 @@ def sendEmail(smtp_host, smtp_user, smtp_pwd, smtp_port , subject, body):
 
     content = MIMEText(body, 'html', 'utf-8')
     message = MIMEMultipart('related')
-    message['From'] =formataddr(["时髦前哨站", sender])
+    message['From'] =formataddr([ sender])
     message['To'] = sender            # 收件人列表
     message['Subject'] = subject                # 邮件标题
     message.attach(content)
